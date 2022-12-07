@@ -67,12 +67,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_14", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_14", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "2714b8eaaab95a1c"
       }, 
       "inputs": [
         [
@@ -104,12 +108,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_13", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_13", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_1", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1c02e3eebef4748c"
       }, 
       "inputs": [
         [
@@ -141,12 +149,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_6", 
+      "name": "tvmgen_default_fused_nn_conv2d_add", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_6", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "0a3ab8dc5430c9ad"
       }, 
       "inputs": [
         [
@@ -178,12 +190,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_12", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_12", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_2", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "738375e0ba07c89e"
       }, 
       "inputs": [
         [
@@ -215,12 +231,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_11", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_11", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_3", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "151a0a7c1a6d1778"
       }, 
       "inputs": [
         [
@@ -252,12 +272,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_5", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_5", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_1", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "8a041339b3c26fce"
       }, 
       "inputs": [
         [
@@ -279,21 +303,22 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate", 
+        "hash": "bd53e4d60652e784"
       }, 
       "inputs": [
         [
-          1, 
+          28, 
           0, 
           0
         ], 
         [
-          28, 
+          1, 
           0, 
           0
         ]
@@ -311,12 +336,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_10", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_4", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_10", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_4", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "282db096339004aa"
       }, 
       "inputs": [
         [
@@ -348,12 +377,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_15", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_5", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_15", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_5", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "3e32af46aa295473"
       }, 
       "inputs": [
         [
@@ -385,19 +418,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_4", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "6be90b976fd924f0"
       }, 
       "inputs": [
-        [
-          28, 
-          0, 
-          0
-        ], 
         [
           35, 
           0, 
@@ -410,6 +442,11 @@
         ], 
         [
           37, 
+          0, 
+          0
+        ], 
+        [
+          28, 
           0, 
           0
         ]
@@ -427,12 +464,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_101", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_4_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_10", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_4", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "282db096339004aa"
       }, 
       "inputs": [
         [
@@ -464,12 +505,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_9", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_6", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_9", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_6", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "8be74bb896751ebd"
       }, 
       "inputs": [
         [
@@ -501,12 +546,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_4", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_2", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "345edeb3a0005bf9"
       }, 
       "inputs": [
         [
@@ -528,21 +577,22 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_1", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_1", 
+        "hash": "9e2b2d65a54b0787"
       }, 
       "inputs": [
         [
-          2, 
+          47, 
           0, 
           0
         ], 
         [
-          47, 
+          2, 
           0, 
           0
         ]
@@ -560,12 +610,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_8", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_7", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_8", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_7", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "c92e7603337cf110"
       }, 
       "inputs": [
         [
@@ -597,12 +651,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_16", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_8", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_16", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_8", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1bdd833a021abf7c"
       }, 
       "inputs": [
         [
@@ -634,19 +692,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_3", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_1", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "b9635f8ca279567a"
       }, 
       "inputs": [
-        [
-          47, 
-          0, 
-          0
-        ], 
         [
           54, 
           0, 
@@ -661,26 +718,32 @@
           56, 
           0, 
           0
+        ], 
+        [
+          47, 
+          0, 
+          0
         ]
       ]
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_11", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_1_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_1", 
+        "hash": "9e2b2d65a54b0787"
       }, 
       "inputs": [
         [
-          3, 
+          57, 
           0, 
           0
         ], 
         [
-          57, 
+          3, 
           0, 
           0
         ]
@@ -698,12 +761,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_81", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_7_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_8", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_7", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "c92e7603337cf110"
       }, 
       "inputs": [
         [
@@ -735,12 +802,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_161", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_8_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_16", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_8", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1bdd833a021abf7c"
       }, 
       "inputs": [
         [
@@ -772,19 +843,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_31", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_1_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_1", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "b9635f8ca279567a"
       }, 
       "inputs": [
-        [
-          57, 
-          0, 
-          0
-        ], 
         [
           64, 
           0, 
@@ -797,6 +867,11 @@
         ], 
         [
           66, 
+          0, 
+          0
+        ], 
+        [
+          57, 
           0, 
           0
         ]
@@ -814,12 +889,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_82", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_7_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_8", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_7", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "c92e7603337cf110"
       }, 
       "inputs": [
         [
@@ -851,12 +930,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_7", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_9", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_7", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_9", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "5945b757012b29c7"
       }, 
       "inputs": [
         [
@@ -888,12 +971,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_3", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_3", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "3d54da18e2a54a06"
       }, 
       "inputs": [
         [
@@ -915,21 +1002,22 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_2", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_2", 
+        "hash": "ef16d0a31e1e787e"
       }, 
       "inputs": [
         [
-          4, 
+          76, 
           0, 
           0
         ], 
         [
-          76, 
+          4, 
           0, 
           0
         ]
@@ -947,12 +1035,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_6", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_10", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_6", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_10", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1c928b1a0ffbeb60"
       }, 
       "inputs": [
         [
@@ -984,12 +1076,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_5", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_11", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_5", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_11", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "6f66906af2090e63"
       }, 
       "inputs": [
         [
@@ -1021,19 +1117,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_2", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_2", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "dc106ea1a1162323"
       }, 
       "inputs": [
-        [
-          76, 
-          0, 
-          0
-        ], 
         [
           83, 
           0, 
@@ -1048,26 +1143,32 @@
           85, 
           0, 
           0
+        ], 
+        [
+          76, 
+          0, 
+          0
         ]
       ]
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_21", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_2_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_2", 
+        "hash": "ef16d0a31e1e787e"
       }, 
       "inputs": [
         [
-          5, 
+          86, 
           0, 
           0
         ], 
         [
-          86, 
+          5, 
           0, 
           0
         ]
@@ -1085,12 +1186,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_61", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_10_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_6", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_10", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1c928b1a0ffbeb60"
       }, 
       "inputs": [
         [
@@ -1122,12 +1227,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_51", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_11_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_5", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_11", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "6f66906af2090e63"
       }, 
       "inputs": [
         [
@@ -1159,19 +1268,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_21", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_2_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_2", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "dc106ea1a1162323"
       }, 
       "inputs": [
-        [
-          86, 
-          0, 
-          0
-        ], 
         [
           93, 
           0, 
@@ -1186,26 +1294,32 @@
           95, 
           0, 
           0
+        ], 
+        [
+          86, 
+          0, 
+          0
         ]
       ]
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_22", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_2_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_2", 
+        "hash": "ef16d0a31e1e787e"
       }, 
       "inputs": [
         [
-          6, 
+          96, 
           0, 
           0
         ], 
         [
-          96, 
+          6, 
           0, 
           0
         ]
@@ -1223,12 +1337,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_62", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_10_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_6", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_10", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1c928b1a0ffbeb60"
       }, 
       "inputs": [
         [
@@ -1260,12 +1378,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_52", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_11_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_5", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_11", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "6f66906af2090e63"
       }, 
       "inputs": [
         [
@@ -1297,19 +1419,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_22", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_2_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_2", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "dc106ea1a1162323"
       }, 
       "inputs": [
-        [
-          96, 
-          0, 
-          0
-        ], 
         [
           103, 
           0, 
@@ -1322,6 +1443,11 @@
         ], 
         [
           105, 
+          0, 
+          0
+        ], 
+        [
+          96, 
           0, 
           0
         ]
@@ -1339,12 +1465,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_63", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_10_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_6", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_10", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1c928b1a0ffbeb60"
       }, 
       "inputs": [
         [
@@ -1376,12 +1506,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_53", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_11_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_5", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_11", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "6f66906af2090e63"
       }, 
       "inputs": [
         [
@@ -1413,12 +1547,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_2", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_4", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_4", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "54c3ef219c5a3e2f"
       }, 
       "inputs": [
         [
@@ -1440,21 +1578,22 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_3", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_3", 
+        "hash": "93e10acb70a34888"
       }, 
       "inputs": [
         [
-          7, 
+          115, 
           0, 
           0
         ], 
         [
-          115, 
+          7, 
           0, 
           0
         ]
@@ -1472,12 +1611,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_4", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_12", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_12", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "25c51fbeb99691c1"
       }, 
       "inputs": [
         [
@@ -1509,12 +1652,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_17", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_13", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_17", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_13", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "ee5f57b5b810b2a1"
       }, 
       "inputs": [
         [
@@ -1546,19 +1693,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_1", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_3", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "271cd3417d6c2971"
       }, 
       "inputs": [
-        [
-          115, 
-          0, 
-          0
-        ], 
         [
           122, 
           0, 
@@ -1573,26 +1719,32 @@
           124, 
           0, 
           0
+        ], 
+        [
+          115, 
+          0, 
+          0
         ]
       ]
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_31", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_3_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_3", 
+        "hash": "93e10acb70a34888"
       }, 
       "inputs": [
         [
-          8, 
+          125, 
           0, 
           0
         ], 
         [
-          125, 
+          8, 
           0, 
           0
         ]
@@ -1610,12 +1762,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_41", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_12_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_12", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "25c51fbeb99691c1"
       }, 
       "inputs": [
         [
@@ -1647,12 +1803,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_171", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_13_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_17", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_13", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "ee5f57b5b810b2a1"
       }, 
       "inputs": [
         [
@@ -1684,19 +1844,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add_11", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_3_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_3", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "271cd3417d6c2971"
       }, 
       "inputs": [
-        [
-          125, 
-          0, 
-          0
-        ], 
         [
           132, 
           0, 
@@ -1709,6 +1868,11 @@
         ], 
         [
           134, 
+          0, 
+          0
+        ], 
+        [
+          125, 
           0, 
           0
         ]
@@ -1726,12 +1890,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_42", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_12_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_12", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "25c51fbeb99691c1"
       }, 
       "inputs": [
         [
@@ -1763,12 +1931,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_3", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_14", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_14", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "67356c3ddb8ca5e8"
       }, 
       "inputs": [
         [
@@ -1800,12 +1972,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_1", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_5", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_5", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "cc21bfa81091ab52"
       }, 
       "inputs": [
         [
@@ -1827,21 +2003,22 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_4", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_4", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_4", 
+        "hash": "e09aa38c29f0f833"
       }, 
       "inputs": [
         [
-          9, 
+          144, 
           0, 
           0
         ], 
         [
-          144, 
+          9, 
           0, 
           0
         ]
@@ -1859,12 +2036,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_2", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_15", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_15", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1b8f589e83485eae"
       }, 
       "inputs": [
         [
@@ -1896,12 +2077,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_1", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_16", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_16", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "ed746ff7ea059be6"
       }, 
       "inputs": [
         [
@@ -1933,19 +2118,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_4", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_4", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "19ea2f921a053241"
       }, 
       "inputs": [
-        [
-          144, 
-          0, 
-          0
-        ], 
         [
           151, 
           0, 
@@ -1960,26 +2144,32 @@
           153, 
           0, 
           0
+        ], 
+        [
+          144, 
+          0, 
+          0
         ]
       ]
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_concatenate_41", 
+      "name": "tvmgen_default_fused_strided_slice_concatenate_4_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "2", 
-        "func_name": "fused_strided_slice_concatenate_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_concatenate_4", 
+        "hash": "e09aa38c29f0f833"
       }, 
       "inputs": [
         [
-          10, 
+          154, 
           0, 
           0
         ], 
         [
-          154, 
+          10, 
           0, 
           0
         ]
@@ -1997,12 +2187,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_21", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_15_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_15", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1b8f589e83485eae"
       }, 
       "inputs": [
         [
@@ -2034,12 +2228,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_111", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_16_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_16", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "ed746ff7ea059be6"
       }, 
       "inputs": [
         [
@@ -2071,19 +2269,18 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_add1", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_add_4_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "4", 
-        "func_name": "fused_nn_conv2d_add_add", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_add_4", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "19ea2f921a053241"
       }, 
       "inputs": [
-        [
-          154, 
-          0, 
-          0
-        ], 
         [
           161, 
           0, 
@@ -2096,6 +2293,11 @@
         ], 
         [
           163, 
+          0, 
+          0
+        ], 
+        [
+          154, 
           0, 
           0
         ]
@@ -2113,12 +2315,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_22", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_15_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_15", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "1b8f589e83485eae"
       }, 
       "inputs": [
         [
@@ -2150,12 +2356,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip_121", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_16_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_16", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "ed746ff7ea059be6"
       }, 
       "inputs": [
         [
@@ -2187,12 +2397,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_6", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_6", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "aeb1860735c2228b"
       }, 
       "inputs": [
         [
@@ -2224,12 +2438,16 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_conv2d_add_clip", 
+      "name": "tvmgen_default_fused_nn_conv2d_add_clip_17", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_conv2d_add_clip", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_conv2d_add_clip_17", 
+        "out_layout": "", 
+        "kernel_layout": "OIHW", 
+        "data_layout": "NCHW", 
+        "hash": "ee13143e61340ede"
       }, 
       "inputs": [
         [
@@ -2251,12 +2469,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_mean_1", 
+      "name": "tvmgen_default_fused_mean", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_mean_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_mean", 
+        "hash": "6461fe9ebaf16525"
       }, 
       "inputs": [
         [
@@ -2268,33 +2487,17 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_mean", 
+      "name": "tvmgen_default_fused_mean_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_mean", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_mean_1", 
+        "hash": "e6d1fb4eda6c5cf8"
       }, 
       "inputs": [
         [
           177, 
-          0, 
-          0
-        ]
-      ]
-    }, 
-    {
-      "op": "tvm_op", 
-      "name": "fused_nn_batch_flatten_multiply", 
-      "attrs": {
-        "num_outputs": "1", 
-        "num_inputs": "1", 
-        "func_name": "fused_nn_batch_flatten_multiply", 
-        "flatten_data": "0"
-      }, 
-      "inputs": [
-        [
-          178, 
           0, 
           0
         ]
@@ -2312,14 +2515,20 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_nn_dense_add", 
+      "name": "tvmgen_default_fused_nn_dense_add", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "3", 
-        "func_name": "fused_nn_dense_add", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_nn_dense_add", 
+        "hash": "520b885a7f729f1a"
       }, 
       "inputs": [
+        [
+          178, 
+          0, 
+          0
+        ], 
         [
           179, 
           0, 
@@ -2329,22 +2538,18 @@
           180, 
           0, 
           0
-        ], 
-        [
-          181, 
-          0, 
-          0
         ]
       ]
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice", 
+      "name": "tvmgen_default_fused_strided_slice", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice", 
+        "hash": "87a5c452fe9a4f9c"
       }, 
       "inputs": [
         [
@@ -2356,12 +2561,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_1", 
+      "name": "tvmgen_default_fused_strided_slice_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_1", 
+        "hash": "477c948d442d0f8d"
       }, 
       "inputs": [
         [
@@ -2373,12 +2579,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_11", 
+      "name": "tvmgen_default_fused_strided_slice_1_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_1", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_1", 
+        "hash": "477c948d442d0f8d"
       }, 
       "inputs": [
         [
@@ -2390,12 +2597,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_2", 
+      "name": "tvmgen_default_fused_strided_slice_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_2", 
+        "hash": "084cba9891948cfb"
       }, 
       "inputs": [
         [
@@ -2407,12 +2615,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_21", 
+      "name": "tvmgen_default_fused_strided_slice_2_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_2", 
+        "hash": "084cba9891948cfb"
       }, 
       "inputs": [
         [
@@ -2424,12 +2633,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_22", 
+      "name": "tvmgen_default_fused_strided_slice_2_2", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_2", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_2", 
+        "hash": "084cba9891948cfb"
       }, 
       "inputs": [
         [
@@ -2441,12 +2651,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_3", 
+      "name": "tvmgen_default_fused_strided_slice_3", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_3", 
+        "hash": "ca1d66564f208b73"
       }, 
       "inputs": [
         [
@@ -2458,12 +2669,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_31", 
+      "name": "tvmgen_default_fused_strided_slice_3_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_3", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_3", 
+        "hash": "ca1d66564f208b73"
       }, 
       "inputs": [
         [
@@ -2475,12 +2687,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_4", 
+      "name": "tvmgen_default_fused_strided_slice_4", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_4", 
+        "hash": "af5391f06e78c02a"
       }, 
       "inputs": [
         [
@@ -2492,12 +2705,13 @@
     }, 
     {
       "op": "tvm_op", 
-      "name": "fused_strided_slice_41", 
+      "name": "tvmgen_default_fused_strided_slice_4_1", 
       "attrs": {
         "num_outputs": "1", 
         "num_inputs": "1", 
-        "func_name": "fused_strided_slice_4", 
-        "flatten_data": "0"
+        "flatten_data": "0", 
+        "func_name": "tvmgen_default_fused_strided_slice_4", 
+        "hash": "af5391f06e78c02a"
       }, 
       "inputs": [
         [
@@ -2624,10 +2838,15 @@
     172, 
     174, 
     175, 
-    180, 
-    181
+    179, 
+    180
   ], 
   "heads": [
+    [
+      181, 
+      0, 
+      0
+    ], 
     [
       182, 
       0, 
@@ -2675,11 +2894,6 @@
     ], 
     [
       191, 
-      0, 
-      0
-    ], 
-    [
-      192, 
       0, 
       0
     ]
@@ -2879,206 +3093,204 @@
         "float32", 
         "float32", 
         "float32", 
-        "float32", 
         "float32"
       ]
     ], 
-    "shape": [
-      "list_shape", 
+    "device_index": [
+      "list_int", 
       [
-        [1, 3, 224, 224], 
-        [1, 3, 56, 56], 
-        [1, 4, 28, 28], 
-        [1, 4, 28, 28], 
-        [1, 8, 14, 14], 
-        [1, 8, 14, 14], 
-        [1, 8, 14, 14], 
-        [1, 12, 14, 14], 
-        [1, 12, 14, 14], 
-        [1, 20, 7, 7], 
-        [1, 20, 7, 7], 
-        [32, 3, 3, 3], 
-        [32, 1, 1], 
-        [1, 32, 112, 112], 
-        [32, 1, 3, 3], 
-        [32, 1, 1], 
-        [1, 32, 112, 112], 
-        [16, 32, 1, 1], 
-        [16, 1, 1], 
-        [1, 16, 112, 112], 
-        [96, 16, 1, 1], 
-        [96, 1, 1], 
-        [1, 96, 112, 112], 
-        [96, 1, 3, 3], 
-        [96, 1, 1], 
-        [1, 96, 56, 56], 
-        [24, 96, 1, 1], 
-        [24, 1, 1], 
-        [1, 24, 56, 56], 
-        [1, 24, 56, 56], 
-        [144, 24, 1, 1], 
-        [144, 1, 1], 
-        [1, 144, 56, 56], 
-        [144, 1, 3, 3], 
-        [144, 1, 1], 
-        [1, 144, 56, 56], 
-        [24, 144, 1, 1], 
-        [24, 1, 1], 
-        [1, 24, 56, 56], 
-        [144, 24, 1, 1], 
-        [144, 1, 1], 
-        [1, 144, 56, 56], 
-        [144, 1, 3, 3], 
-        [144, 1, 1], 
-        [1, 144, 28, 28], 
-        [32, 144, 1, 1], 
-        [32, 1, 1], 
-        [1, 32, 28, 28], 
-        [1, 32, 28, 28], 
-        [192, 32, 1, 1], 
-        [192, 1, 1], 
-        [1, 192, 28, 28], 
-        [192, 1, 3, 3], 
-        [192, 1, 1], 
-        [1, 192, 28, 28], 
-        [32, 192, 1, 1], 
-        [32, 1, 1], 
-        [1, 32, 28, 28], 
-        [1, 32, 28, 28], 
-        [192, 32, 1, 1], 
-        [192, 1, 1], 
-        [1, 192, 28, 28], 
-        [192, 1, 3, 3], 
-        [192, 1, 1], 
-        [1, 192, 28, 28], 
-        [32, 192, 1, 1], 
-        [32, 1, 1], 
-        [1, 32, 28, 28], 
-        [192, 32, 1, 1], 
-        [192, 1, 1], 
-        [1, 192, 28, 28], 
-        [192, 1, 3, 3], 
-        [192, 1, 1], 
-        [1, 192, 14, 14], 
-        [64, 192, 1, 1], 
-        [64, 1, 1], 
-        [1, 64, 14, 14], 
-        [1, 64, 14, 14], 
-        [384, 64, 1, 1], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [384, 1, 3, 3], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [64, 384, 1, 1], 
-        [64, 1, 1], 
-        [1, 64, 14, 14], 
-        [1, 64, 14, 14], 
-        [384, 64, 1, 1], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [384, 1, 3, 3], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [64, 384, 1, 1], 
-        [64, 1, 1], 
-        [1, 64, 14, 14], 
-        [1, 64, 14, 14], 
-        [384, 64, 1, 1], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [384, 1, 3, 3], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [64, 384, 1, 1], 
-        [64, 1, 1], 
-        [1, 64, 14, 14], 
-        [384, 64, 1, 1], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [384, 1, 3, 3], 
-        [384, 1, 1], 
-        [1, 384, 14, 14], 
-        [96, 384, 1, 1], 
-        [96, 1, 1], 
-        [1, 96, 14, 14], 
-        [1, 96, 14, 14], 
-        [576, 96, 1, 1], 
-        [576, 1, 1], 
-        [1, 576, 14, 14], 
-        [576, 1, 3, 3], 
-        [576, 1, 1], 
-        [1, 576, 14, 14], 
-        [96, 576, 1, 1], 
-        [96, 1, 1], 
-        [1, 96, 14, 14], 
-        [1, 96, 14, 14], 
-        [576, 96, 1, 1], 
-        [576, 1, 1], 
-        [1, 576, 14, 14], 
-        [576, 1, 3, 3], 
-        [576, 1, 1], 
-        [1, 576, 14, 14], 
-        [96, 576, 1, 1], 
-        [96, 1, 1], 
-        [1, 96, 14, 14], 
-        [576, 96, 1, 1], 
-        [576, 1, 1], 
-        [1, 576, 14, 14], 
-        [576, 1, 3, 3], 
-        [576, 1, 1], 
-        [1, 576, 7, 7], 
-        [160, 576, 1, 1], 
-        [160, 1, 1], 
-        [1, 160, 7, 7], 
-        [1, 160, 7, 7], 
-        [960, 160, 1, 1], 
-        [960, 1, 1], 
-        [1, 960, 7, 7], 
-        [960, 1, 3, 3], 
-        [960, 1, 1], 
-        [1, 960, 7, 7], 
-        [160, 960, 1, 1], 
-        [160, 1, 1], 
-        [1, 160, 7, 7], 
-        [1, 160, 7, 7], 
-        [960, 160, 1, 1], 
-        [960, 1, 1], 
-        [1, 960, 7, 7], 
-        [960, 1, 3, 3], 
-        [960, 1, 1], 
-        [1, 960, 7, 7], 
-        [160, 960, 1, 1], 
-        [160, 1, 1], 
-        [1, 160, 7, 7], 
-        [960, 160, 1, 1], 
-        [960, 1, 1], 
-        [1, 960, 7, 7], 
-        [960, 1, 3, 3], 
-        [960, 1, 1], 
-        [1, 960, 7, 7], 
-        [320, 960, 1, 1], 
-        [320, 1, 1], 
-        [1, 320, 7, 7], 
-        [1280, 320, 1, 1], 
-        [1280, 1, 1], 
-        [1, 1280, 7, 7], 
-        [1, 1280, 7], 
-        [1, 1280], 
-        [1, 1280], 
-        [27, 1280], 
-        [27], 
-        [1, 27], 
-        [1, 3, 56, 56], 
-        [1, 4, 28, 28], 
-        [1, 4, 28, 28], 
-        [1, 8, 14, 14], 
-        [1, 8, 14, 14], 
-        [1, 8, 14, 14], 
-        [1, 12, 14, 14], 
-        [1, 12, 14, 14], 
-        [1, 20, 7, 7], 
-        [1, 20, 7, 7]
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2, 
+        2
       ]
     ], 
     "storage_id": [
@@ -3263,7 +3475,6 @@
         13, 
         113, 
         128, 
-        113, 
         129, 
         130, 
         131, 
@@ -3277,6 +3488,203 @@
         73, 
         132, 
         133
+      ]
+    ], 
+    "shape": [
+      "list_shape", 
+      [
+        [1, 3, 224, 224], 
+        [1, 3, 56, 56], 
+        [1, 4, 28, 28], 
+        [1, 4, 28, 28], 
+        [1, 8, 14, 14], 
+        [1, 8, 14, 14], 
+        [1, 8, 14, 14], 
+        [1, 12, 14, 14], 
+        [1, 12, 14, 14], 
+        [1, 20, 7, 7], 
+        [1, 20, 7, 7], 
+        [32, 3, 3, 3], 
+        [1, 32, 1, 1], 
+        [1, 32, 112, 112], 
+        [32, 1, 3, 3], 
+        [1, 32, 1, 1], 
+        [1, 32, 112, 112], 
+        [16, 32, 1, 1], 
+        [1, 16, 1, 1], 
+        [1, 16, 112, 112], 
+        [96, 16, 1, 1], 
+        [1, 96, 1, 1], 
+        [1, 96, 112, 112], 
+        [96, 1, 3, 3], 
+        [1, 96, 1, 1], 
+        [1, 96, 56, 56], 
+        [24, 96, 1, 1], 
+        [1, 24, 1, 1], 
+        [1, 24, 56, 56], 
+        [1, 24, 56, 56], 
+        [144, 24, 1, 1], 
+        [1, 144, 1, 1], 
+        [1, 144, 56, 56], 
+        [144, 1, 3, 3], 
+        [1, 144, 1, 1], 
+        [1, 144, 56, 56], 
+        [24, 144, 1, 1], 
+        [1, 24, 1, 1], 
+        [1, 24, 56, 56], 
+        [144, 24, 1, 1], 
+        [1, 144, 1, 1], 
+        [1, 144, 56, 56], 
+        [144, 1, 3, 3], 
+        [1, 144, 1, 1], 
+        [1, 144, 28, 28], 
+        [32, 144, 1, 1], 
+        [1, 32, 1, 1], 
+        [1, 32, 28, 28], 
+        [1, 32, 28, 28], 
+        [192, 32, 1, 1], 
+        [1, 192, 1, 1], 
+        [1, 192, 28, 28], 
+        [192, 1, 3, 3], 
+        [1, 192, 1, 1], 
+        [1, 192, 28, 28], 
+        [32, 192, 1, 1], 
+        [1, 32, 1, 1], 
+        [1, 32, 28, 28], 
+        [1, 32, 28, 28], 
+        [192, 32, 1, 1], 
+        [1, 192, 1, 1], 
+        [1, 192, 28, 28], 
+        [192, 1, 3, 3], 
+        [1, 192, 1, 1], 
+        [1, 192, 28, 28], 
+        [32, 192, 1, 1], 
+        [1, 32, 1, 1], 
+        [1, 32, 28, 28], 
+        [192, 32, 1, 1], 
+        [1, 192, 1, 1], 
+        [1, 192, 28, 28], 
+        [192, 1, 3, 3], 
+        [1, 192, 1, 1], 
+        [1, 192, 14, 14], 
+        [64, 192, 1, 1], 
+        [1, 64, 1, 1], 
+        [1, 64, 14, 14], 
+        [1, 64, 14, 14], 
+        [384, 64, 1, 1], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [384, 1, 3, 3], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [64, 384, 1, 1], 
+        [1, 64, 1, 1], 
+        [1, 64, 14, 14], 
+        [1, 64, 14, 14], 
+        [384, 64, 1, 1], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [384, 1, 3, 3], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [64, 384, 1, 1], 
+        [1, 64, 1, 1], 
+        [1, 64, 14, 14], 
+        [1, 64, 14, 14], 
+        [384, 64, 1, 1], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [384, 1, 3, 3], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [64, 384, 1, 1], 
+        [1, 64, 1, 1], 
+        [1, 64, 14, 14], 
+        [384, 64, 1, 1], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [384, 1, 3, 3], 
+        [1, 384, 1, 1], 
+        [1, 384, 14, 14], 
+        [96, 384, 1, 1], 
+        [1, 96, 1, 1], 
+        [1, 96, 14, 14], 
+        [1, 96, 14, 14], 
+        [576, 96, 1, 1], 
+        [1, 576, 1, 1], 
+        [1, 576, 14, 14], 
+        [576, 1, 3, 3], 
+        [1, 576, 1, 1], 
+        [1, 576, 14, 14], 
+        [96, 576, 1, 1], 
+        [1, 96, 1, 1], 
+        [1, 96, 14, 14], 
+        [1, 96, 14, 14], 
+        [576, 96, 1, 1], 
+        [1, 576, 1, 1], 
+        [1, 576, 14, 14], 
+        [576, 1, 3, 3], 
+        [1, 576, 1, 1], 
+        [1, 576, 14, 14], 
+        [96, 576, 1, 1], 
+        [1, 96, 1, 1], 
+        [1, 96, 14, 14], 
+        [576, 96, 1, 1], 
+        [1, 576, 1, 1], 
+        [1, 576, 14, 14], 
+        [576, 1, 3, 3], 
+        [1, 576, 1, 1], 
+        [1, 576, 7, 7], 
+        [160, 576, 1, 1], 
+        [1, 160, 1, 1], 
+        [1, 160, 7, 7], 
+        [1, 160, 7, 7], 
+        [960, 160, 1, 1], 
+        [1, 960, 1, 1], 
+        [1, 960, 7, 7], 
+        [960, 1, 3, 3], 
+        [1, 960, 1, 1], 
+        [1, 960, 7, 7], 
+        [160, 960, 1, 1], 
+        [1, 160, 1, 1], 
+        [1, 160, 7, 7], 
+        [1, 160, 7, 7], 
+        [960, 160, 1, 1], 
+        [1, 960, 1, 1], 
+        [1, 960, 7, 7], 
+        [960, 1, 3, 3], 
+        [1, 960, 1, 1], 
+        [1, 960, 7, 7], 
+        [160, 960, 1, 1], 
+        [1, 160, 1, 1], 
+        [1, 160, 7, 7], 
+        [960, 160, 1, 1], 
+        [1, 960, 1, 1], 
+        [1, 960, 7, 7], 
+        [960, 1, 3, 3], 
+        [1, 960, 1, 1], 
+        [1, 960, 7, 7], 
+        [320, 960, 1, 1], 
+        [1, 320, 1, 1], 
+        [1, 320, 7, 7], 
+        [1280, 320, 1, 1], 
+        [1, 1280, 1, 1], 
+        [1, 1280, 7, 7], 
+        [1, 1280, 7], 
+        [1, 1280], 
+        [27, 1280], 
+        [1, 27], 
+        [1, 27], 
+        [1, 3, 56, 56], 
+        [1, 4, 28, 28], 
+        [1, 4, 28, 28], 
+        [1, 8, 14, 14], 
+        [1, 8, 14, 14], 
+        [1, 8, 14, 14], 
+        [1, 12, 14, 14], 
+        [1, 12, 14, 14], 
+        [1, 20, 7, 7], 
+        [1, 20, 7, 7]
       ]
     ]
   }, 
@@ -3473,7 +3881,6 @@
     189, 
     190, 
     191, 
-    192, 
-    193
+    192
   ]
 }

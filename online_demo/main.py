@@ -49,7 +49,7 @@ def torch2executor(torch_module: torch.nn.Module, torch_inputs: Tuple[torch.Tens
     if os.path.exists(lib_fname) and os.path.exists(graph_fname) and os.path.exists(params_fname):
         with open(graph_fname, 'rt') as f:
             graph = f.read()
-        tvm_module = tvm.module.load(lib_fname)
+        tvm_module = tvm.runtime.load_module(lib_fname)
         params = tvm.relay.load_param_dict(bytearray(open(params_fname, 'rb').read()))
     else:
         graph, tvm_module, params = torch2tvm_module(torch_module, torch_inputs, target)
@@ -59,7 +59,7 @@ def torch2executor(torch_module: torch.nn.Module, torch_inputs: Tuple[torch.Tens
         with open(params_fname, 'wb') as f:
             f.write(tvm.relay.save_param_dict(params))
 
-    ctx = tvm.gpu() if target.startswith('cuda') else tvm.cpu()
+    ctx = tvm.cuda() if target.startswith('cuda') else tvm.cpu()
     graph_module = graph_runtime.create(graph, tvm_module, ctx)
     for pname, pvalue in params.items():
         graph_module.set_input(pname, pvalue)
@@ -118,7 +118,7 @@ class GroupScale(object):
     """
 
     def __init__(self, size, interpolation=Image.BILINEAR):
-        self.worker = torchvision.transforms.Scale(size, interpolation)
+        self.worker = torchvision.transforms.Resize(size, interpolation)
 
     def __call__(self, img_group):
         return [self.worker(img) for img in img_group]
@@ -284,16 +284,16 @@ def main():
     print("Build Executor...")
     executor, ctx = get_executor()
     buffer = (
-        tvm.nd.empty((1, 3, 56, 56), ctx=ctx),
-        tvm.nd.empty((1, 4, 28, 28), ctx=ctx),
-        tvm.nd.empty((1, 4, 28, 28), ctx=ctx),
-        tvm.nd.empty((1, 8, 14, 14), ctx=ctx),
-        tvm.nd.empty((1, 8, 14, 14), ctx=ctx),
-        tvm.nd.empty((1, 8, 14, 14), ctx=ctx),
-        tvm.nd.empty((1, 12, 14, 14), ctx=ctx),
-        tvm.nd.empty((1, 12, 14, 14), ctx=ctx),
-        tvm.nd.empty((1, 20, 7, 7), ctx=ctx),
-        tvm.nd.empty((1, 20, 7, 7), ctx=ctx)
+        tvm.nd.empty((1, 3, 56, 56), device=ctx),
+        tvm.nd.empty((1, 4, 28, 28), device=ctx),
+        tvm.nd.empty((1, 4, 28, 28), device=ctx),
+        tvm.nd.empty((1, 8, 14, 14), device=ctx),
+        tvm.nd.empty((1, 8, 14, 14), device=ctx),
+        tvm.nd.empty((1, 8, 14, 14), device=ctx),
+        tvm.nd.empty((1, 12, 14, 14), device=ctx),
+        tvm.nd.empty((1, 12, 14, 14), device=ctx),
+        tvm.nd.empty((1, 20, 7, 7), device=ctx),
+        tvm.nd.empty((1, 20, 7, 7), device=ctx)
     )
     idx = 0
     history = [2]
@@ -306,11 +306,12 @@ def main():
     while True:
         i_frame += 1
         _, img = cap.read()  # (480, 640, 3) 0 ~ 255
+        img = np.zeros((480, 320, 3), dtype=np.uint8)
         if i_frame % 2 == 0:  # skip every other frame to obtain a suitable frame rate
             t1 = time.time()
             img_tran = transform([Image.fromarray(img).convert('RGB')])
             input_var = torch.autograd.Variable(img_tran.view(1, 3, img_tran.size(1), img_tran.size(2)))
-            img_nd = tvm.nd.array(input_var.detach().numpy(), ctx=ctx)
+            img_nd = tvm.nd.array(input_var.detach().numpy(), device=ctx)
             inputs: Tuple[tvm.nd.NDArray] = (img_nd,) + buffer
             outputs = executor(inputs)
             feat, buffer = outputs[0], outputs[1:]
