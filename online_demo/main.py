@@ -98,6 +98,21 @@ def get_executor(use_gpu=True):
         target = 'llvm -mcpu=cortex-a72 -target=armv7l-linux-gnueabihf'
     return torch2executor(torch_module, torch_inputs, target)
 
+def get_buffer(device):
+    buffer = (
+        tvm.nd.empty((1, 3, 56, 56), device=device),
+        tvm.nd.empty((1, 4, 28, 28), device=device),
+        tvm.nd.empty((1, 4, 28, 28), device=device),
+        tvm.nd.empty((1, 8, 14, 14), device=device),
+        tvm.nd.empty((1, 8, 14, 14), device=device),
+        tvm.nd.empty((1, 8, 14, 14), device=device),
+        tvm.nd.empty((1, 12, 14, 14), device=device),
+        tvm.nd.empty((1, 12, 14, 14), device=device),
+        tvm.nd.empty((1, 20, 7, 7), device=device),
+        tvm.nd.empty((1, 20, 7, 7), device=device)
+    )
+    return buffer
+
 
 def transform(frame: np.ndarray):
     # 480, 640, 3, 0 ~ 255
@@ -283,18 +298,7 @@ def main():
     transform = get_transform()
     print("Build Executor...")
     executor, ctx = get_executor()
-    buffer = (
-        tvm.nd.empty((1, 3, 56, 56), device=ctx),
-        tvm.nd.empty((1, 4, 28, 28), device=ctx),
-        tvm.nd.empty((1, 4, 28, 28), device=ctx),
-        tvm.nd.empty((1, 8, 14, 14), device=ctx),
-        tvm.nd.empty((1, 8, 14, 14), device=ctx),
-        tvm.nd.empty((1, 8, 14, 14), device=ctx),
-        tvm.nd.empty((1, 12, 14, 14), device=ctx),
-        tvm.nd.empty((1, 12, 14, 14), device=ctx),
-        tvm.nd.empty((1, 20, 7, 7), device=ctx),
-        tvm.nd.empty((1, 20, 7, 7), device=ctx)
-    )
+    buffer = get_buffer(ctx)
     idx = 0
     history = [2]
     history_logit = []
