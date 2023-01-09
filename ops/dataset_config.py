@@ -5,7 +5,7 @@
 
 import os
 
-ROOT_DATASET = '/ssd/video/'  # '/data/jilin/'
+ROOT_DATASET = '/home/sylee/Dataset/'  # '/data/jilin/'
 
 
 def return_ucf101(modality):
@@ -59,7 +59,10 @@ def return_something(modality):
         raise NotImplementedError
     return filename_categories, filename_imglist_train, filename_imglist_val, root_data, prefix
 
-
+# unzip 20bn-something-something-v2-\??.zip
+# cat 20bn-something-something-v2-?? | tar -xvzf –
+# python3 tools/vid2img_sthv2.py
+# python3 tools/gen_label_sthv2.py
 def return_somethingv2(modality):
     filename_categories = 'something/v2/category.txt'
     if modality == 'RGB':
@@ -77,6 +80,9 @@ def return_somethingv2(modality):
     return filename_categories, filename_imglist_train, filename_imglist_val, root_data, prefix
 
 
+# unzip 20bn-jester-v1-\??.zip
+# cat 20bn-jester-v1-?? | tar zx
+# python3 tools/gen_label_jester.py
 def return_jester(modality):
     filename_categories = 'jester/category.txt'
     if modality == 'RGB':
