@@ -38,6 +38,7 @@ class TemporalShift(nn.Module):
         else:
             out = torch.zeros_like(x)
             merged = torch.sub(x[:, :-1, :2 * fold], x[:, 1:, :2 * fold])
+            # 16f: 21073920 = 0.021G 8f: 9834496 = 0.010G
             out[:, :-1, :fold] = merged[:, :, :fold]
             out[:, 1:, fold: 2 * fold] = merged[:, :, fold: 2 * fold]
             out[:, :, 2 * fold:] = x[:, :, 2 * fold:]  # not shift

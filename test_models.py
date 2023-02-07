@@ -332,8 +332,30 @@ print('Overall Prec@1 {:.02f}% Prec@5 {:.02f}%'.format(top1.avg, top5.avg))
 # python3 test_models.py somethingv2 --weights=pretrained/TSM_somethingv2_RGB_resnet50_shift8_blockres_avg_segment8_e45.pth --test_segments=8 --batch_size=64 -j 16 --test_crops=3  --twice_sample
 
 
+# something
 
 # minus
+# Ref: TSN @1 30.4 @5 61.0 TSM @1 61.7 @5 87.4 // @1 59.1 @5 85.6
 # test
 # Class Accuracy 54.29%
 # Overall Prec@1 61.58% Prec@5 87.25%
+# val
+# Testing Results: Prec@1 59.535 Prec@5 85.684 Loss 1.63917
+
+# minus 16frame
+# Ref: TSM @1 63.4 @5 88.5
+# test
+# Class Accuracy 57.01%
+# Overall Prec@1 63.56% Prec@5 88.17%
+# val
+# Testing Results: Prec@1 61.585 Prec@5 87.020 Loss 1.60548
+
+# jester
+
+# minus
+# Ref: TSN @1 83.9 @5 99.6 TSM @1 97.0 @5 99.9
+# test
+# Class Accuracy 96.71%
+# Overall Prec@1 97.11% Prec@5 99.89%
+# val
+# Testing Results: Prec@1 95.976 Prec@5 99.797 Loss 0.13747
