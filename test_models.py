@@ -79,7 +79,7 @@ def accuracy(output, target, topk=(1,)):
     correct = pred.eq(target.view(1, -1).expand_as(pred))
     res = []
     for k in topk:
-         correct_k = correct[:k].view(-1).float().sum(0)
+         correct_k = correct[:k].reshape(-1).float().sum(0)
          res.append(correct_k.mul_(100.0 / batch_size))
     return res
 
@@ -329,3 +329,11 @@ print('Class Accuracy {:.02f}%'.format(np.mean(cls_acc) * 100))
 print('Overall Prec@1 {:.02f}% Prec@5 {:.02f}%'.format(top1.avg, top5.avg))
 
 
+# python3 test_models.py somethingv2 --weights=pretrained/TSM_somethingv2_RGB_resnet50_shift8_blockres_avg_segment8_e45.pth --test_segments=8 --batch_size=64 -j 16 --test_crops=3  --twice_sample
+
+
+
+# minus
+# test
+# Class Accuracy 54.29%
+# Overall Prec@1 61.58% Prec@5 87.25%

@@ -37,9 +37,16 @@ class TemporalShift(nn.Module):
             # out = InplaceShift.apply(x, fold)
         else:
             out = torch.zeros_like(x)
-            out[:, :-1, :fold] = x[:, 1:, :fold]  # shift left
-            out[:, 1:, fold: 2 * fold] = x[:, :-1, fold: 2 * fold]  # shift right
+            merged = torch.sub(x[:, :-1, :2 * fold], x[:, 1:, :2 * fold])
+            out[:, :-1, :fold] = merged[:, :, :fold]
+            out[:, 1:, fold: 2 * fold] = merged[:, :, fold: 2 * fold]
             out[:, :, 2 * fold:] = x[:, :, 2 * fold:]  # not shift
+                    
+        # else:
+        #     out = torch.zeros_like(x)
+        #     out[:, :-1, :fold] = x[:, 1:, :fold]  # shift left
+        #     out[:, 1:, fold: 2 * fold] = x[:, :-1, fold: 2 * fold]  # shift right
+        #     out[:, :, 2 * fold:] = x[:, :, 2 * fold:]  # not shift
 
         return out.view(nt, c, h, w)
 
