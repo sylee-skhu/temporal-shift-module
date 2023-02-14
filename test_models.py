@@ -359,3 +359,10 @@ print('Overall Prec@1 {:.02f}% Prec@5 {:.02f}%'.format(top1.avg, top5.avg))
 # Overall Prec@1 97.11% Prec@5 99.89%
 # val
 # Testing Results: Prec@1 95.976 Prec@5 99.797 Loss 0.13747
+
+# minus 16frame
+# test
+# Class Accuracy 96.90%
+# Overall Prec@1 97.28% Prec@5 99.91%
+# val
+# Testing Results: Prec@1 96.673 Prec@5 99.804 Loss 0.12054
