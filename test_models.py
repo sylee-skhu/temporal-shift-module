@@ -18,14 +18,17 @@ from ops import dataset_config
 from torch.nn import functional as F
 
 # options
-parser = argparse.ArgumentParser(description="TSM testing on the full validation set")
+parser = argparse.ArgumentParser(
+    description="TSM testing on the full validation set")
 parser.add_argument('dataset', type=str)
 
 # may contain splits
 parser.add_argument('--weights', type=str, default=None)
 parser.add_argument('--test_segments', type=str, default=25)
-parser.add_argument('--dense_sample', default=False, action="store_true", help='use dense sample as I3D')
-parser.add_argument('--twice_sample', default=False, action="store_true", help='use twice sample for ensemble')
+parser.add_argument('--dense_sample', default=False,
+                    action="store_true", help='use dense sample as I3D')
+parser.add_argument('--twice_sample', default=False,
+                    action="store_true", help='use twice sample for ensemble')
 parser.add_argument('--full_res', default=False, action="store_true",
                     help='use full resolution 256x256 for test as in Non-local I3D')
 
@@ -39,14 +42,16 @@ parser.add_argument('-j', '--workers', default=8, type=int, metavar='N',
 parser.add_argument('--test_list', type=str, default=None)
 parser.add_argument('--csv_file', type=str, default=None)
 
-parser.add_argument('--softmax', default=False, action="store_true", help='use softmax')
+parser.add_argument('--softmax', default=False,
+                    action="store_true", help='use softmax')
 
 parser.add_argument('--max_num', type=int, default=-1)
 parser.add_argument('--input_size', type=int, default=224)
 parser.add_argument('--crop_fusion_type', type=str, default='avg')
 parser.add_argument('--gpus', nargs='+', type=int, default=None)
-parser.add_argument('--img_feature_dim',type=int, default=256)
-parser.add_argument('--num_set_segments',type=int, default=1,help='TODO: select multiply set of n-frames from a video')
+parser.add_argument('--img_feature_dim', type=int, default=256)
+parser.add_argument('--num_set_segments', type=int, default=1,
+                    help='TODO: select multiply set of n-frames from a video')
 parser.add_argument('--pretrain', type=str, default='imagenet')
 
 args = parser.parse_args()
@@ -54,6 +59,7 @@ args = parser.parse_args()
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""
+
     def __init__(self):
         self.reset()
 
@@ -79,8 +85,8 @@ def accuracy(output, target, topk=(1,)):
     correct = pred.eq(target.view(1, -1).expand_as(pred))
     res = []
     for k in topk:
-         correct_k = correct[:k].reshape(-1).float().sum(0)
-         res.append(correct_k.mul_(100.0 / batch_size))
+        correct_k = correct[:k].reshape(-1).float().sum(0)
+        res.append(correct_k.mul_(100.0 / batch_size))
     return res
 
 
@@ -115,7 +121,8 @@ modality_list = []
 
 total_num = None
 for this_weights, this_test_segments, test_file in zip(weights_list, test_segments_list, test_file_list):
-    is_shift, shift_div, shift_place = parse_shift_option_from_log_name(this_weights)
+    is_shift, shift_div, shift_place = parse_shift_option_from_log_name(
+        this_weights)
     if 'RGB' in this_weights:
         modality = 'RGB'
     else:
@@ -124,7 +131,8 @@ for this_weights, this_test_segments, test_file in zip(weights_list, test_segmen
     modality_list.append(modality)
     num_class, args.train_list, val_list, root_path, prefix = dataset_config.return_dataset(args.dataset,
                                                                                             modality)
-    print('=> shift: {}, shift_div: {}, shift_place: {}'.format(is_shift, shift_div, shift_place))
+    print('=> shift: {}, shift_div: {}, shift_place: {}'.format(
+        is_shift, shift_div, shift_place))
     net = TSN(num_class, this_test_segments if is_shift else 1, modality,
               base_model=this_arch,
               consensus_type=args.crop_fusion_type,
@@ -132,17 +140,20 @@ for this_weights, this_test_segments, test_file in zip(weights_list, test_segmen
               pretrain=args.pretrain,
               is_shift=is_shift, shift_div=shift_div, shift_place=shift_place,
               non_local='_nl' in this_weights,
+              exp=args.exp
               )
 
     if 'tpool' in this_weights:
         from ops.temporal_shift import make_temporal_pool
-        make_temporal_pool(net.base_model, this_test_segments)  # since DataParallel
+        # since DataParallel
+        make_temporal_pool(net.base_model, this_test_segments)
 
     checkpoint = torch.load(this_weights)
     checkpoint = checkpoint['state_dict']
 
     # base_dict = {('base_model.' + k).replace('base_model.fc', 'new_fc'): v for k, v in list(checkpoint.items())}
-    base_dict = {'.'.join(k.split('.')[1:]): v for k, v in list(checkpoint.items())}
+    base_dict = {'.'.join(k.split('.')[1:])
+                          : v for k, v in list(checkpoint.items())}
     replace_dict = {'base_model.classifier.weight': 'new_fc.weight',
                     'base_model.classifier.bias': 'new_fc.bias',
                     }
@@ -171,23 +182,26 @@ for this_weights, this_test_segments, test_file in zip(weights_list, test_segmen
             GroupOverSample(input_size, net.scale_size)
         ])
     else:
-        raise ValueError("Only 1, 5, 10 crops are supported while we got {}".format(args.test_crops))
+        raise ValueError(
+            "Only 1, 5, 10 crops are supported while we got {}".format(args.test_crops))
 
     data_loader = torch.utils.data.DataLoader(
-            TSNDataSet(root_path, test_file if test_file is not None else val_list, num_segments=this_test_segments,
-                       new_length=1 if modality == "RGB" else 5,
-                       modality=modality,
-                       image_tmpl=prefix,
-                       test_mode=True,
-                       remove_missing=len(weights_list) == 1,
-                       transform=torchvision.transforms.Compose([
-                           cropping,
-                           Stack(roll=(this_arch in ['BNInception', 'InceptionV3'])),
-                           ToTorchFormatTensor(div=(this_arch not in ['BNInception', 'InceptionV3'])),
-                           GroupNormalize(net.input_mean, net.input_std),
-                       ]), dense_sample=args.dense_sample, twice_sample=args.twice_sample),
-            batch_size=args.batch_size, shuffle=False,
-            num_workers=args.workers, pin_memory=True,
+        TSNDataSet(root_path, test_file if test_file is not None else val_list, num_segments=this_test_segments,
+                   new_length=1 if modality == "RGB" else 5,
+                   modality=modality,
+                   image_tmpl=prefix,
+                   test_mode=True,
+                   remove_missing=len(weights_list) == 1,
+                   transform=torchvision.transforms.Compose([
+                       cropping,
+                       Stack(
+                           roll=(this_arch in ['BNInception', 'InceptionV3'])),
+                       ToTorchFormatTensor(
+                           div=(this_arch not in ['BNInception', 'InceptionV3'])),
+                       GroupNormalize(net.input_mean, net.input_std),
+                   ]), dense_sample=args.dense_sample, twice_sample=args.twice_sample),
+        batch_size=args.batch_size, shuffle=False,
+        num_workers=args.workers, pin_memory=True,
     )
 
     if args.gpus is not None:
@@ -231,11 +245,12 @@ def eval_video(video_data, net, this_test_segments, modality):
         elif modality == 'RGBDiff':
             length = 18
         else:
-            raise ValueError("Unknown modality "+ modality)
+            raise ValueError("Unknown modality " + modality)
 
         data_in = data.view(-1, length, data.size(2), data.size(3))
         if is_shift:
-            data_in = data_in.view(batch_size * num_crop, this_test_segments, length, data_in.size(2), data_in.size(3))
+            data_in = data_in.view(
+                batch_size * num_crop, this_test_segments, length, data_in.size(2), data_in.size(3))
         rst = net(data_in)
         rst = rst.reshape(batch_size, num_crop, -1).mean(1)
 
@@ -248,7 +263,8 @@ def eval_video(video_data, net, this_test_segments, modality):
         if net.module.is_shift:
             rst = rst.reshape(batch_size, num_class)
         else:
-            rst = rst.reshape((batch_size, -1, num_class)).mean(axis=1).reshape((batch_size, num_class))
+            rst = rst.reshape((batch_size, -1, num_class)
+                              ).mean(axis=1).reshape((batch_size, num_class))
 
         return i, rst, label
 
@@ -277,7 +293,8 @@ for i, data_label_pairs in enumerate(zip(*data_iter_list)):
         for p, g in zip(ensembled_predict, this_label.cpu().numpy()):
             output.append([p[None, ...], g])
         cnt_time = time.time() - proc_start_time
-        prec1, prec5 = accuracy(torch.from_numpy(ensembled_predict), this_label, topk=(1, 5))
+        prec1, prec5 = accuracy(torch.from_numpy(
+            ensembled_predict), this_label, topk=(1, 5))
         top1.update(prec1.item(), this_label.numel())
         top5.update(prec5.item(), this_label.numel())
         if i % 20 == 0:
@@ -286,7 +303,8 @@ for i, data_label_pairs in enumerate(zip(*data_iter_list)):
                                                               float(cnt_time) / (i+1) / args.batch_size, top1.avg, top5.avg))
 
 video_pred = [np.argmax(x[0]) for x in output]
-video_pred_top5 = [np.argsort(np.mean(x[0], axis=0).reshape(-1))[::-1][:5] for x in output]
+video_pred_top5 = [np.argsort(
+    np.mean(x[0], axis=0).reshape(-1))[::-1][:5] for x in output]
 
 video_labels = [x[1] for x in output]
 

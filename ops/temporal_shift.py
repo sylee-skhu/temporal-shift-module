@@ -9,14 +9,17 @@ import torch.nn.functional as F
 
 
 class TemporalShift(nn.Module):
-    def __init__(self, net, n_segment=3, n_div=8, inplace=False):
+    def __init__(self, net, n_segment=3, n_div=8, inplace=False, exp=None):
         super(TemporalShift, self).__init__()
         self.net = net
         self.n_segment = n_segment
         self.fold_div = n_div
         self.inplace = inplace
+        self.exp = exp
         if inplace:
             print('=> Using in-place shift...')
+        if exp is not None:
+            print('=> Applying experimental TSM... ' + exp)
         print('=> Using fold div: {}'.format(self.fold_div))
 
     def forward(self, x):
@@ -104,7 +107,7 @@ class TemporalPool(nn.Module):
         return x
 
 
-def make_temporal_shift(net, n_segment, n_div=8, place='blockres', temporal_pool=False):
+def make_temporal_shift(net, n_segment, n_div=8, place='blockres', temporal_pool=False, exp=None):
     if temporal_pool:
         n_segment_list = [n_segment, n_segment //
                           2, n_segment // 2, n_segment // 2]
@@ -121,7 +124,7 @@ def make_temporal_shift(net, n_segment, n_div=8, place='blockres', temporal_pool
                 print('=> Processing stage with {} blocks'.format(len(blocks)))
                 for i, b in enumerate(blocks):
                     blocks[i] = TemporalShift(
-                        b, n_segment=this_segment, n_div=n_div)
+                        b, n_segment=this_segment, n_div=n_div, exp=exp)
                 return nn.Sequential(*(blocks))
 
             net.layer1 = make_block_temporal(net.layer1, n_segment_list[0])
@@ -141,7 +144,7 @@ def make_temporal_shift(net, n_segment, n_div=8, place='blockres', temporal_pool
                 for i, b in enumerate(blocks):
                     if i % n_round == 0:
                         blocks[i].conv1 = TemporalShift(
-                            b.conv1, n_segment=this_segment, n_div=n_div)
+                            b.conv1, n_segment=this_segment, n_div=n_div, exp=exp)
                 return nn.Sequential(*blocks)
 
             net.layer1 = make_block_temporal(net.layer1, n_segment_list[0])
