@@ -5,7 +5,7 @@
 
 import os
 
-ROOT_DATASET = '/home/sylee/Dataset/'  # '/data/jilin/'
+ROOT_DATASET = '/home/sangyun/Datasets/'  # '/data/jilin/'
 
 
 def return_ucf101(modality):

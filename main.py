@@ -32,7 +32,8 @@ def main():
                                                                                                       args.modality)
     full_arch_name = args.arch
     if args.shift:
-        full_arch_name += '_shift{}_{}'.format(args.shift_div, args.shift_place)
+        full_arch_name += '_shift{}_{}'.format(
+            args.shift_div, args.shift_place)
     if args.temporal_pool:
         full_arch_name += '_tpool'
     args.store_name = '_'.join(
@@ -69,7 +70,8 @@ def main():
     input_mean = model.input_mean
     input_std = model.input_std
     policies = model.get_optim_policies()
-    train_augmentation = model.get_augmentation(flip=False if 'something' in args.dataset or 'jester' in args.dataset else True)
+    train_augmentation = model.get_augmentation(
+        flip=False if 'something' in args.dataset or 'jester' in args.dataset else True)
 
     model = torch.nn.DataParallel(model, device_ids=args.gpus).cuda()
 
@@ -145,8 +147,10 @@ def main():
                    image_tmpl=prefix,
                    transform=torchvision.transforms.Compose([
                        train_augmentation,
-                       Stack(roll=(args.arch in ['BNInception', 'InceptionV3'])),
-                       ToTorchFormatTensor(div=(args.arch not in ['BNInception', 'InceptionV3'])),
+                       Stack(
+                           roll=(args.arch in ['BNInception', 'InceptionV3'])),
+                       ToTorchFormatTensor(
+                           div=(args.arch not in ['BNInception', 'InceptionV3'])),
                        normalize,
                    ]), dense_sample=args.dense_sample),
         batch_size=args.batch_size, shuffle=True,
@@ -162,8 +166,10 @@ def main():
                    transform=torchvision.transforms.Compose([
                        GroupScale(int(scale_size)),
                        GroupCenterCrop(crop_size),
-                       Stack(roll=(args.arch in ['BNInception', 'InceptionV3'])),
-                       ToTorchFormatTensor(div=(args.arch not in ['BNInception', 'InceptionV3'])),
+                       Stack(
+                           roll=(args.arch in ['BNInception', 'InceptionV3'])),
+                       ToTorchFormatTensor(
+                           div=(args.arch not in ['BNInception', 'InceptionV3'])),
                        normalize,
                    ]), dense_sample=args.dense_sample),
         batch_size=args.batch_size, shuffle=False,
@@ -183,19 +189,23 @@ def main():
         validate(val_loader, model, criterion, 0)
         return
 
-    log_training = open(os.path.join(args.root_log, args.store_name, 'log.csv'), 'w')
+    log_training = open(os.path.join(
+        args.root_log, args.store_name, 'log.csv'), 'w')
     with open(os.path.join(args.root_log, args.store_name, 'args.txt'), 'w') as f:
         f.write(str(args))
-    tf_writer = SummaryWriter(log_dir=os.path.join(args.root_log, args.store_name))
+    tf_writer = SummaryWriter(
+        log_dir=os.path.join(args.root_log, args.store_name))
     for epoch in range(args.start_epoch, args.epochs):
         adjust_learning_rate(optimizer, epoch, args.lr_type, args.lr_steps)
 
         # train for one epoch
-        train(train_loader, model, criterion, optimizer, epoch, log_training, tf_writer)
+        train(train_loader, model, criterion,
+              optimizer, epoch, log_training, tf_writer)
 
         # evaluate on validation set
         if (epoch + 1) % args.eval_freq == 0 or epoch == args.epochs - 1:
-            prec1 = validate(val_loader, model, criterion, epoch, log_training, tf_writer)
+            prec1 = validate(val_loader, model, criterion,
+                             epoch, log_training, tf_writer)
 
             # remember best prec@1 and save checkpoint
             is_best = prec1 > best_prec1
@@ -254,7 +264,8 @@ def train(train_loader, model, criterion, optimizer, epoch, log, tf_writer):
         loss.backward()
 
         if args.clip_gradient is not None:
-            total_norm = clip_grad_norm_(model.parameters(), args.clip_gradient)
+            total_norm = clip_grad_norm_(
+                model.parameters(), args.clip_gradient)
 
         optimizer.step()
         optimizer.zero_grad()
@@ -270,8 +281,8 @@ def train(train_loader, model, criterion, optimizer, epoch, log, tf_writer):
                       'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
                       'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
                       'Prec@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
-                epoch, i, len(train_loader), batch_time=batch_time,
-                data_time=data_time, loss=losses, top1=top1, top5=top5, lr=optimizer.param_groups[-1]['lr'] * 0.1))  # TODO
+                          epoch, i, len(train_loader), batch_time=batch_time,
+                          data_time=data_time, loss=losses, top1=top1, top5=top5, lr=optimizer.param_groups[-1]['lr'] * 0.1))  # TODO
             print(output)
             log.write(output + '\n')
             log.flush()
@@ -317,8 +328,8 @@ def validate(val_loader, model, criterion, epoch, log=None, tf_writer=None):
                           'Loss {loss.val:.4f} ({loss.avg:.4f})\t'
                           'Prec@1 {top1.val:.3f} ({top1.avg:.3f})\t'
                           'Prec@5 {top5.val:.3f} ({top5.avg:.3f})'.format(
-                    i, len(val_loader), batch_time=batch_time, loss=losses,
-                    top1=top1, top5=top5))
+                              i, len(val_loader), batch_time=batch_time, loss=losses,
+                              top1=top1, top5=top5))
                 print(output)
                 if log is not None:
                     log.write(output + '\n')
@@ -377,5 +388,5 @@ def check_rootfolders():
 if __name__ == '__main__':
     main()
 
-# python3 main.py jester RGB --arch resnet50 --num_segments 8 --gd 20 --lr 0.005 --lr_steps 20 40 --epochs 50 --batch-size 32 -j 16 --dropout 0.5 --consensus_type=avg --eval-freq=1 --shift --shift_div=8 --shift_place=blockres --npb
-# python3 main.py somethingv2 RGB --arch resnet50 --num_segments 8 --gd 20 --lr 0.005 --lr_steps 20 40 --epochs 50 --batch-size 32 -j 16 --dropout 0.5 --consensus_type=avg --eval-freq=1 --shift --shift_div=8 --shift_place=blockres --npb
+# python3 main.py jester RGB --arch resnet50 --num_segments 8 --gd 20 --lr 0.01 --lr_steps 20 40 --epochs 50 --batch-size 64 -j 16 --dropout 0.5 --consensus_type=avg --eval-freq=1 --shift --shift_div=8 --shift_place=blockres --npb
+# python3 main.py somethingv2 RGB --arch resnet50 --num_segments 8 --gd 20 --lr 0.01 --lr_steps 20 40 --epochs 50 --batch-size 64 -j 16 --dropout 0.5 --consensus_type=avg --eval-freq=1 --shift --shift_div=8 --shift_place=blockres --npb
